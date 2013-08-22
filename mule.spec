@@ -5,6 +5,7 @@ Name:		mule-standalone
 Version:	3.4.0
 Release:	2%{?dist}
 Summary:	Mule ESB Standalone Binary distribution
+Packager:	Ernest Beinrohr <Ernest.Beinrohr@axonpro.sk>
 
 Group:		Java
 License:	CPAL
