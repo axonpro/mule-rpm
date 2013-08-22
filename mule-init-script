@@ -1,0 +1,36 @@
+#! /bin/sh
+
+# The following two lines are used by the chkconfig command. Change as is
+#  appropriate for your application.  They should remain commented.
+# chkconfig: 2345 20 80
+# description: Mule
+
+
+. /etc/sysconfig/mule-standalone
+
+
+case "$1" in
+  start)
+        $BIN start
+        ;;
+  stop)
+        $BIN stop
+        ;;
+  console)
+        $BIN console
+        ;;
+  status)
+        status $BIN
+        ;;
+  restart|force-reload)
+        $0 stop
+        $0 start
+        ;;
+  reload)
+        exit 3
+        ;;
+  *)
+        echo $"Usage: $0 {start|stop|status|restart|try-restart|force-reload}"
+        exit 2
+esac
+

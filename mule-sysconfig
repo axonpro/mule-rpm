@@ -1,0 +1,5 @@
+export MULE_HOME=/usr/share/java/mule-standalone
+export RUN_AS_USER=mule
+export PIDDIR=/var/run/mule-standalone
+export BIN=$MULE_HOME/bin/mule
+
